@@ -4,6 +4,7 @@
 # Files to keep in root
 !VIBE_new.ipynb
 !.gitignore
+!README.md
 
 # Directories to keep
 !Project/
