@@ -1,0 +1,80 @@
+entity,label,source,topic,sentiment_score
+India,GPE,Times of India,Economy/Market,-0.9806
+RBI,ORG,Times of India,Economy/Market,0.7859
+RBI,ORG,Times of India,Economy/Market,0.7859
+Sanjay Malhotra,PERSON,Times of India,Economy/Market,0.7859
+US,GPE,Times of India,Economy/Market,0.7859
+US,GPE,Times of India,Economy/Market,0.7859
+Putin,PERSON,Times of India,Politics/Elections,0.5423
+Vladimir Putin,PERSON,Times of India,Politics/Elections,0.5423
+Delhi,GPE,Times of India,Politics/Elections,0.5423
+Russia,GPE,Times of India,Politics/Elections,0.5423
+RBI,ORG,Times of India,Economy/Market,0.7094
+RBI,ORG,Times of India,Economy/Market,0.6249
+Sanjay Malhotra,PERSON,Times of India,Economy/Market,0.6249
+Delhi,GPE,Times of India,Politics/Elections,0.8481
+Rashtrapati Bhavan,ORG,Times of India,Politics/Elections,0.8481
+Putin,PERSON,Times of India,Politics/Elections,0.8481
+RBI,ORG,Times of India,Economy/Market,0.0516
+BSE Sensex,ORG,Times of India,Economy/Market,0.0516
+BSE Sensex,ORG,Times of India,Economy/Market,0.0516
+RBI,ORG,Times of India,Economy/Market,0.0516
+Sanjay Malhotra,PERSON,Times of India,Economy/Market,0.0516
+RBI,ORG,Times of India,Economy/Market,0.0516
+Rolex,PERSON,Times of India,Politics/Elections,-0.0516
+DK Shivakumar,PERSON,Times of India,Politics/Elections,-0.0516
+BJP,ORG,Times of India,Politics/Elections,-0.0516
+DK Shivakumar,PERSON,Times of India,Politics/Elections,-0.0516
+BJP,ORG,Times of India,Politics/Elections,-0.0516
+Rolex,ORG,Times of India,Politics/Elections,-0.0516
+Putin,PERSON,NDTV,Politics/Elections,0.0
+Mahatma Gandhi,PERSON,NDTV,Politics/Elections,0.0
+Putin,PERSON,NDTV,Politics/Elections,0.0
+India,GPE,NDTV,Politics/Elections,0.0
+India,GPE,NDTV,Politics/Elections,0.0
+Vladimir Putin,PERSON,NDTV,Politics/Elections,0.7506
+India,GPE,NDTV,Politics/Elections,0.7506
+Putin,PERSON,NDTV,Politics/Elections,0.7506
+Vladimir Putin,PERSON,NDTV,Politics/Elections,0.7506
+India,GPE,NDTV,Politics/Elections,0.7506
+Putin,PERSON,NDTV,Politics/Elections,0.7506
+India,GPE,NDTV,Politics/Elections,0.7506
+US,GPE,NDTV,Politics/Elections,0.7506
+RBI,ORG,NDTV,Economy/Market,0.6605
+Sanjay Malhotra,PERSON,NDTV,Economy/Market,0.6605
+India,GPE,NDTV,Economy/Market,0.6605
+Putin,PERSON,India Today,Politics/Elections,0.0
+Mahatma Gandhi,PERSON,India Today,Politics/Elections,0.0
+India,GPE,India Today,Politics/Elections,0.0
+putin,PERSON,India Today,Politics/Elections,0.0
+Mahatma Gandhi,PERSON,India Today,Politics/Elections,0.0
+India,GPE,India Today,Politics/Elections,0.0
+India,GPE,India Today,Politics/Elections,-0.2023
+Putin,PERSON,India Today,Politics/Elections,-0.2023
+putin,PERSON,India Today,Politics/Elections,-0.2023
+India,GPE,India Today,Politics/Elections,-0.2023
+Putin,PERSON,India Today,Politics/Elections,-0.2023
+Rashtrapati Bhavan,PERSON,India Today,Politics/Elections,0.0
+Rashtrapati Bhavan,PERSON,India Today,Politics/Elections,0.0
+Putin,PERSON,India Today,Politics/Elections,0.0
+India,GPE,India Today,Politics/Elections,0.0
+putin,PERSON,India Today,Politics/Elections,0.0
+Putin,PERSON,India Today,Politics/Elections,0.0
+India,GPE,India Today,Politics/Elections,0.0
+Rashtrapati Bhavan,PERSON,India Today,Politics/Elections,0.7184
+Rashtrapati Bhavan,PERSON,India Today,Politics/Elections,0.7184
+Delhi,GPE,HindustanTimes,Crime/Law,-0.5106
+Delhi,GPE,HindustanTimes,Politics/Elections,0.34
+US,GPE,HindustanTimes,Crime/Law,-0.9612
+US,GPE,HindustanTimes,Environment/Health,0.8625
+US,GPE,HindustanTimes,Environment/Health,0.8625
+India,GPE,FirstPost,Environment/Health,0.0
+India,GPE,FirstPost,Environment/Health,0.0
+Putin,PERSON,ABP News,Politics/Elections,-0.5574
+Russia,GPE,ABP News,Politics/Elections,-0.5574
+Putin,PERSON,ABP News,Politics/Elections,-0.5574
+Russia,GPE,ABP News,Politics/Elections,-0.5574
+India,GPE,ABP News,Economy/Market,0.0
+RBI,ORG,ABP News,Economy/Market,0.0
+RBI,ORG,ABP News,Economy/Market,-0.0516
+RBI,ORG,ABP News,Economy/Market,0.296
