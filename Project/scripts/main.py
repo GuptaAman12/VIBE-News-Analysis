@@ -1,3 +1,4 @@
+# VIBE News Analysis Pipeline - Final Version
 import os
 from data_scraper import NewsScraper
 from data_processor import NewsProcessor
