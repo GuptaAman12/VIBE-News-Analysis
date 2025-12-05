@@ -1,24 +1,16 @@
-# Python
-__pycache__/
+# Ignore everything by default
+*
+
+# Directories to keep
+!scripts/
+!data/
+!results/
+
+# Files to keep
+!VIBE_new.ipynb
+!.gitignore
+
+# Python specific ignores (just in case they end up in allowed dirs)
+scripts/__pycache__/
 *.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.env
-.venv
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Jupyter Notebook
 .ipynb_checkpoints
-*/.ipynb_checkpoints/*
-
-# Data and Results (Optional - uncomment if you want to exclude them)
-# data/
-# results/
-
-# OS generated files
-.DS_Store
-Thumbs.db
