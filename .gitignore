@@ -7,9 +7,14 @@
 
 # Directories to keep
 !Project/
-!Project/**
+!Project/scripts/
+!Project/scripts/**
 
-# Python specific ignores (even inside allowed dirs)
+# Explicitly ignore data and results
+Project/data/
+Project/results/
+
+# Python specific ignores
 __pycache__/
 *.pyc
 .ipynb_checkpoints
