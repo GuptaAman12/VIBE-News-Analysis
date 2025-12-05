@@ -1,16 +1,15 @@
 # Ignore everything by default
 *
 
-# Directories to keep
-!scripts/
-!data/
-!results/
-
-# Files to keep
+# Files to keep in root
 !VIBE_new.ipynb
 !.gitignore
 
-# Python specific ignores (just in case they end up in allowed dirs)
+# Directories to keep
+!Project/
+!Project/scripts/
+
+# Python specific ignores
 scripts/__pycache__/
 *.pyc
 .ipynb_checkpoints
