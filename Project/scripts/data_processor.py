@@ -9,20 +9,14 @@ from collections import Counter
 import textstat
 import os
 
+from project_paths import DATA_DIR, NLTK_DIR
+from topics import assign_topic
+
 class NewsProcessor:
     def __init__(self):
-        # 2. Define Recent Events (Keywords)
-        self.topics = {
-            'Politics/Elections': ['election', 'poll', 'bjp', 'congress', 'vote', 'modi', 'gandhi'],
-            'Economy/Market': ['sensex', 'nifty', 'economy', 'inflation', 'rbi', 'gdp', 'bank'],
-            'Environment/Health': ['pollution', 'smog', 'aqi', 'health', 'hospital', 'doctor', 'rain'],
-            'Crime/Law': ['police', 'court', 'supreme court', 'arrest', 'case', 'justice']
-        }
-        
         # Setup NLTK
         print("Downloading NLTK resources...")
-        # Set local NLTK path
-        nltk_data_dir = os.path.join(os.getcwd(), 'nltk_data')
+        nltk_data_dir = NLTK_DIR
         os.makedirs(nltk_data_dir, exist_ok=True)
         nltk.data.path.append(nltk_data_dir)
         
@@ -52,22 +46,13 @@ class NewsProcessor:
             return self.df
 
     def filter_topics_and_clean(self):
-        print("\n--- 🧹 Filtering Topics & Cleaning Text... ---")
+        print("\n--- Filtering Topics & Cleaning Text... ---")
 
         if self.df.empty:
             print("No data to process.")
             return
 
         # 1. Assign Topics
-        def assign_topic(text):
-            if not isinstance(text, str): return "Other"
-            text_lower = text.lower()
-            for topic, keywords in self.topics.items():
-                for k in keywords:
-                    if k in text_lower:
-                        return topic
-            return "Other"
-
         self.df['topic'] = self.df['text'].apply(assign_topic)
 
         # Filter out 'Other'
@@ -88,7 +73,7 @@ class NewsProcessor:
         self.df['cleaned_text'] = self.df['text'].apply(clean_text)
 
     def analyze_bias(self):
-        print("\n--- 🧠 Analyzing Sentiment & Subjectivity... ---")
+        print("\n--- Analyzing Sentiment & Subjectivity... ---")
         if self.df.empty: return
 
         sid = SentimentIntensityAnalyzer()
@@ -104,7 +89,7 @@ class NewsProcessor:
         self.df[['sentiment_score', 'subjectivity_score']] = self.df['text'].apply(get_metrics)
 
     def analyze_ner(self):
-        print("\n--- 🔬 Analyzing Named Entities (NER)... ---")
+        print("\n--- Analyzing Named Entities (NER)... ---")
         if self.df.empty or self.nlp is None: 
             self.top_entity_df = pd.DataFrame()
             return
@@ -135,7 +120,7 @@ class NewsProcessor:
             self.top_entity_df = pd.DataFrame()
 
     def analyze_readability(self):
-        print("\n--- 📖 Analyzing Readability Scores... ---")
+        print("\n--- Analyzing Readability Scores... ---")
         if self.df.empty: return
 
         def get_readability(text):
@@ -158,10 +143,10 @@ class NewsProcessor:
 
 if __name__ == "__main__":
     processor = NewsProcessor()
-    df = processor.load_data(os.path.join('data', 'news_data.csv'))
+    df = processor.load_data(os.path.join(DATA_DIR, 'news_data.csv'))
     if not df.empty:
         processor.filter_topics_and_clean()
         processor.analyze_bias()
         processor.analyze_readability()
         processor.analyze_ner()
-        processor.save_processed_data(os.path.join('data', 'processed_news_data.csv'), os.path.join('data', 'ner_data.csv'))
+        processor.save_processed_data(os.path.join(DATA_DIR, 'processed_news_data.csv'), os.path.join(DATA_DIR, 'ner_data.csv'))

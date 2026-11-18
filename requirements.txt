@@ -1,0 +1,10 @@
+feedparser
+pandas
+numpy
+matplotlib
+seaborn
+textblob
+nltk
+wordcloud
+spacy
+textstat

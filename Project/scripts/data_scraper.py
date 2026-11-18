@@ -3,6 +3,8 @@ import pandas as pd
 import os
 import datetime
 
+from project_paths import DATA_DIR
+
 class NewsScraper:
     def __init__(self):
         # 1. Define RSS Sources (Indian Outlets)
@@ -19,7 +21,7 @@ class NewsScraper:
         self.df = pd.DataFrame()
 
     def fetch_data(self):
-        print("--- 📡 Fetching RSS Feeds... ---")
+        print("--- Fetching RSS Feeds... ---")
         all_articles = []
 
         for source_name, url in self.rss_sources.items():
@@ -47,7 +49,7 @@ class NewsScraper:
         print(f"Total articles fetched: {len(self.df)}")
 
         if self.df.empty:
-            print("❌ No articles found.")
+            print("No articles found.")
 
         return self.df
 
@@ -81,4 +83,4 @@ class NewsScraper:
 if __name__ == "__main__":
     scraper = NewsScraper()
     scraper.fetch_data()
-    scraper.save_data(os.path.join('data', 'news_data.csv'))
+    scraper.save_data(os.path.join(DATA_DIR, 'news_data.csv'))

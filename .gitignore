@@ -5,6 +5,7 @@
 !VIBE_new.ipynb
 !.gitignore
 !README.md
+!requirements.txt
 
 # Directories to keep
 !Project/

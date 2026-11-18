@@ -4,10 +4,12 @@ import seaborn as sns
 from wordcloud import WordCloud
 import os
 
+from project_paths import DATA_DIR, RESULTS_DIR
+
 class NewsVisualizer:
     def __init__(self):
         sns.set_theme(style="whitegrid")
-        self.results_dir = 'results'
+        self.results_dir = RESULTS_DIR
         os.makedirs(self.results_dir, exist_ok=True)
 
     def load_data(self, processed_filepath, ner_filepath):
@@ -30,7 +32,7 @@ class NewsVisualizer:
             print("No data to visualize.")
             return
 
-        print("\n--- 📊 Generating Plots... ---")
+        print("\n--- Generating Plots... ---")
 
         # PLOT 1: Sentiment Distribution by Source and Topic
         if 'sentiment_score' in self.df.columns:
@@ -117,5 +119,5 @@ class NewsVisualizer:
 
 if __name__ == "__main__":
     visualizer = NewsVisualizer()
-    visualizer.load_data(os.path.join('data', 'processed_news_data.csv'), os.path.join('data', 'ner_data.csv'))
+    visualizer.load_data(os.path.join(DATA_DIR, 'processed_news_data.csv'), os.path.join(DATA_DIR, 'ner_data.csv'))
     visualizer.generate_plots()

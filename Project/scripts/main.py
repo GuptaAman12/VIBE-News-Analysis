@@ -3,16 +3,14 @@ import os
 from data_scraper import NewsScraper
 from data_processor import NewsProcessor
 from visualizer import NewsVisualizer
+from project_paths import DATA_DIR, RESULTS_DIR
 
 def main():
     print("=== VIBE News Analysis Pipeline ===")
     
-    # Paths
-    data_dir = 'data'
-    results_dir = 'results'
-    raw_data_path = os.path.join(data_dir, 'news_data.csv')
-    processed_data_path = os.path.join(data_dir, 'processed_news_data.csv')
-    ner_data_path = os.path.join(data_dir, 'ner_data.csv')
+    raw_data_path = os.path.join(DATA_DIR, 'news_data.csv')
+    processed_data_path = os.path.join(DATA_DIR, 'processed_news_data.csv')
+    ner_data_path = os.path.join(DATA_DIR, 'ner_data.csv')
     
     # 1. Scrape Data
     print("\n[Step 1] Scraping Data...")
@@ -41,7 +39,7 @@ def main():
     visualizer.generate_plots()
     
     print("\n=== Pipeline Complete! ===")
-    print(f"Check '{results_dir}' for plots and '{data_dir}' for data files.")
+    print(f"Check '{RESULTS_DIR}' for plots and '{DATA_DIR}' for data files.")
 
 if __name__ == "__main__":
     main()
